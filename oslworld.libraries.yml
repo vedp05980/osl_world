@@ -1,0 +1,13 @@
+global-css:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: {}
+      //fonts.googleapis.com/css?family=Poppins:400,500,600,700: { type: external }
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css: { type: external }
+  js:
+    js/custom.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

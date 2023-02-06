@@ -1,0 +1,10 @@
+name: oslworld
+type: theme
+description: 'This is my custom theme design by oslworld'
+package: core
+base theme: false
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+libraries:
+  - oslworld/global-css

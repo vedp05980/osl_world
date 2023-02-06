@@ -1,0 +1,18 @@
+<?php
+
+function oslworld_preprocess_node(&$variables) {
+  
+  $nodetype = $variables['node'] ? $variables['node']->getType() : [] ;
+  if ($nodetype){
+    $comment_count = $variables['node']->comment ? $variables['node']->comment->getValue()[0]['comment_count'] : NULL;
+
+    $variables['comment_count'] = $comment_count;
+  }
+}
+
+function oslworld_preprocess_field__comment(&$variables,$hook) {
+  $comment_count = $variables['element']['#object']->comment ? $variables['element']['#object']->comment->getValue()[0]['comment_count'] : NULL;
+  if ($comment_count){
+    $variables['comment_count'] = $comment_count;
+  }
+}
